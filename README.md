@@ -72,6 +72,7 @@ kind load docker-image my-app:latest --name "k8s-playground"
 ## Uygulamanın Kullanımı
 
 * IP adresini bulmak için şu komut çalıştırılır.
+  
   ```python
   kubectl logs app
   ```
@@ -82,11 +83,13 @@ http://<ip>:5000/kubernetes.labels.name/app
 * Url deki "kubernetes.labels.name" ve "app" istenilen sorguya göre değişebilir.
 
 * Örneğin, namespace'i kube-system olan loglar
+  
  ```python
  http://<ip>:5000/kubernetes.namespace_name/kube-system
  
  ```
 * Ayrıca zaman araması için aşağıdaki komut kullanılabilir.
+  
   ```python
  http://<ip>:5000/@timestamp/2021-10-15
  
