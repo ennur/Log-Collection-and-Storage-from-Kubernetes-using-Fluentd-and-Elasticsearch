@@ -76,23 +76,22 @@ kind load docker-image my-app:latest --name "k8s-playground"
   ```python
   kubectl logs app
   ```
+  
 ```python
 http://<ip>:5000/kubernetes.labels.name/app
-
 ```
+
 * Url deki "kubernetes.labels.name" ve "app" istenilen sorguya göre değişebilir.
 
 * Örneğin, namespace'i kube-system olan loglar
-  
+
  ```python
  http://<ip>:5000/kubernetes.namespace_name/kube-system
- 
  ```
 * Ayrıca zaman araması için aşağıdaki komut kullanılabilir.
   
-  ```python
+```python
  http://<ip>:5000/@timestamp/2021-10-15
- 
  ```
 
  DipNot: "http://<ip>:5000/" sadece bu url ile "Not Found" bilgisi döndürür. Parametre vermek gerekir.
